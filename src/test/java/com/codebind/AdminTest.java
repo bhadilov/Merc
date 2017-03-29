@@ -19,8 +19,8 @@ public class AdminTest {
 	
 	@Before
 	public void openBrowser(){
-		System.setProperty("webdriver.chrome.driver", "/Users/Bhadilov/Documents/chromedriver");
-		driver  = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "/Users/Bhadilov/Documents/chromedriver");
+		driver  = new FirefoxDriver();
 		driver.get("http://hrm.seleniumminutes.com");
 
 	}
