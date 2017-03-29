@@ -8,5 +8,4 @@ public class AppTest {
 	public void finallyRunning() {
 		System.out.print("Test stucture is beautiful and handsome");
 	}
-
 }

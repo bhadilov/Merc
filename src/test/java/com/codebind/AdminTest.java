@@ -25,11 +25,11 @@ public class AdminTest {
 	@Test
 	public void testWebsite(){
 		Assert.assertEquals("Verify Title", driver.getTitle(), "OrangeHRM");
-		login();
+		successfulAdminlogin();
 		Assert.assertTrue(driver.findElement(By.id("welcome")).isDisplayed());	
 		
 	}
-	public void login() {
+	public void successfulAdminlogin() {
 		driver.findElement(By.id("txtUsername")).sendKeys("admin");
 		driver.findElement(By.id("txtPassword")).sendKeys("Password");
 		driver.findElement(By.id("btnLogin")).click();
@@ -38,9 +38,7 @@ public class AdminTest {
 
 	@After
 	public void saveScreenshotAndCloseBrowser() throws IOException{
-		//screenshotHelper.sa
-		driver.quit();
-		
+		driver.quit();		
 	}
 	
 

@@ -23,17 +23,13 @@ public class DSTVTest {
 	
 	@BeforeClass
 	public static void openBrowser() {
-		
 		driver  = new FirefoxDriver();
-		driver.get("http://m-net.dstv.com/South/home");
-		
+		driver.get("http://m-net.dstv.com/South/home");	
 	}
 	
 	@Test
 	public void verifyOnHomePage(){
-		
 		getTestNAme();
-		//driver.findElement(By.xpath("/html/body/div[4]/div/div[2]/div/week-list/div/h2/span"));
 		Assert.assertTrue(MyTitle().contains("M-Net |"));
 	
 	}
@@ -62,22 +58,4 @@ public class DSTVTest {
 	public static void closeBrowser(){
 	driver.quit();
 	}
-		
-		
-		
-		
-	/*	ele.findElement(By.id("log")).sendKeys("testuser_3");
-		ele.findElement(By.id("pwd")).sendKeys("Password");
-		ele.findElement(By.id("rememberme")).click();
-		ele.findElement(By.id("login")).click();*/
-
-	   // ele.quit();
-		
-		
-		
-		
-		
-
-
-
 }
