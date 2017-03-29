@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class AdminTest {
@@ -18,7 +19,8 @@ public class AdminTest {
 	
 	@Before
 	public void openBrowser(){
-		driver  = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "/Users/Bhadilov/Documents/chromedriver");
+		driver  = new ChromeDriver();
 		driver.get("http://hrm.seleniumminutes.com");
 
 	}

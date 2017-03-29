@@ -14,16 +14,18 @@ import org.openqa.selenium.support.ui .*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class DSTVTest {
-	public static FirefoxDriver driver;
+	public static ChromeDriver driver;
 	WebElement ele;
 	
 	
 	@BeforeClass
 	public static void openBrowser() {
-		driver  = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "/Users/Bhadilov/Documents/chromedriver");
+		driver  = new ChromeDriver();
 		driver.get("http://m-net.dstv.com/South/home");	
 	}
 	
