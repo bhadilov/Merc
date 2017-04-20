@@ -1,31 +1,34 @@
 package com.codebind;
 
 import static org.junit.Assert.*;
-import java.awt.List;
-import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.junit.BeforeClass;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.support.ui .*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 
 public class DSTVTest {
-	public static FirefoxDriver driver;
+	public static WebDriver driver;
 	WebElement ele;
 	
 	
 	@BeforeClass
 	public static void openBrowser() {
-		//System.setProperty("webdriver.chrome.driver", "/Users/Bhadilov/Documents/chromedriver");
-		driver  = new FirefoxDriver();
+		
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "phantomjs-2.1.1-macosx/bin/phantomjs");
+		driver  = new PhantomJSDriver(cap);
 		driver.get("http://m-net.dstv.com/South/home");	
 	}
 	
@@ -35,17 +38,17 @@ public class DSTVTest {
 		Assert.assertTrue(MyTitle().contains("M-Net |"));
 	
 	}
-	@Test
+	/*@Test
 	public void verifylocalcontent() throws InterruptedException{
 		getTestNAme();
-		driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[3]/a")).click();
+		//driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[3]/a")).click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div/ul/li[3]/ul/li[6]/a"))).click();;
 		assertTrue(driver.getCurrentUrl().contains("shark-tank"));
 		Thread.sleep(2000);
 		
-	}
+	}*/
 	
 	public String MyTitle()
 	{

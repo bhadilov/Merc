@@ -6,7 +6,7 @@
 	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
 	<classpathentry kind="var" path="M2_REPO/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar" sourcepath="/ECLIPSE_HOME"/>
 	<classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-firefox-driver/2.53.0/selenium-firefox-driver-2.53.0.jar"/>
@@ -40,5 +40,10 @@
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-leg-rc/2.53.0/selenium-leg-rc-2.53.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.8/snakeyaml-1.8.jar"/>
 	<classpathentry kind="lib" path="/Users/Bhadilov/Downloads/selenium-firefox-driver-3.3.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HtmlUnit"/>
+	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/PLAY/Phantom/phantomjsdriver-1.0.1.jar" sourcepath="phantomjs-2.1.1-macosx/bin"/>
+	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/PLAY/Selenium jars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/PLAY/Selenium jars/selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/PLAY/Selenium jars/selenium-java-3.3.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

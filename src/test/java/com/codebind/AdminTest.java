@@ -1,27 +1,35 @@
 package com.codebind;
 
 
+
 import java.io.IOException;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import org.openqa.selenium.By;  
+
+
 
 
 public class AdminTest {
 	private WebDriver driver;
 	
-	DSTVTest sel = new DSTVTest();
 	
 	@Before
 	public void openBrowser(){
-		//System.setProperty("webdriver.chrome.driver", "/Users/Bhadilov/Documents/chromedriver");
-		driver  = new FirefoxDriver();
-		driver.get("http://hrm.seleniumminutes.com");
+		DesiredCapabilities capab = new DesiredCapabilities();
+		capab.setJavascriptEnabled(true);
+		capab.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "phantomjs-2.1.1-macosx/bin/phantomjs");
+		
+		 driver = new PhantomJSDriver(capab);
+		 driver.get("http://hrm.seleniumminutes.com");
+		 System.out.println("Shit");
 
 	}
 	@Test
