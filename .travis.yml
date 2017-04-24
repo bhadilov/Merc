@@ -3,9 +3,11 @@ sudo: false
 jdk:
   - oraclejdk8
 
-before_install:
-  - "export PATH=/usr/local/phantomjs-2.1.1/bin:$PATH"
-  - "phantomjs --version"
+before_install:                                                                                                                                                                                                                               
+  - wget http://phantomjs.googlecode.com/files/phantomjs-2.1.1-linux-i686.tar.bz2                                                                                                                                                             
+  - tar -xf phantomjs-2.1.1-linux-i686.tar.bz2                                                                                                                                                                                                
+  - sudo rm -rf /usr/local/phantomjs                                                                                                                                                                                                          
+  - sudo mv phantomjs-2.1.1-linux-i686 /usr/local/phantomjs
 
 addons:
   sauce_connect:
