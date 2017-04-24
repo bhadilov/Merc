@@ -8,5 +8,4 @@ addons:
     username: "bhadilov"
     access_key: "f319bf71-6e15-4b5d-b421-83441d8ef39f"
 
-script: phantomjs testrunner.js
 script: mvn test -B
