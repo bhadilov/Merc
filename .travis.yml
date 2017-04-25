@@ -1,6 +1,7 @@
 language: java
 sudo: required
-env: PHANTOMJS2_VERSION="2.1.1" 
+env: PHANTOMJS_VERSION="2.1.1"
+path: PATH=$PWD/travis-phantomjs:$PATH
 jdk:
   - oraclejdk8
   
@@ -8,12 +9,6 @@ addons:
   sauce_connect:
     username: "bhadilov"
     access_key: "f319bf71-6e15-4b5d-b421-83441d8ef39f"
-    
- before_install:
-  - mkdir travis-phantomjs
-  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-  - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
-  - export PATH=$PWD/travis-phantomjs:$PATH
     
 notifications:
   email:
