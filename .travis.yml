@@ -20,6 +20,3 @@ script:
 - bin/phantomjs -v
 - phantomjs --webdriver=4444 &
 
-before_script:
-
--sleep:5
