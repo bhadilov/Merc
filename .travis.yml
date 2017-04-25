@@ -15,4 +15,11 @@ notifications:
     on_success: always
     on_failure: never
 
-script: mvn test -B
+script: 
+- mvn test -B
+- bin/phantomjs -v
+- phantomjs --webdriver=4444 &
+
+before_script:
+
+-sleep:5
