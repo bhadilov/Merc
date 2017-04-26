@@ -1,7 +1,7 @@
 language: java
 sudo: required
 env: PHANTOMJS_VERSION="2.1.1"
-path: PATH=$PWD/travis-phantomjs:$PATH
+PATH: $PATH:/usr/local/lib
 jdk:
   - oraclejdk8
   
