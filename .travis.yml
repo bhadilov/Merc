@@ -11,5 +11,5 @@ addons:
     access_key: "f319bf71-6e15-4b5d-b421-83441d8ef39f"
     
 script: 
-- mvn test -B
+- mvn clean test -B
 - phantomjs --webdriver=4444 &
