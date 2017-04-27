@@ -25,7 +25,7 @@ public class AdminTest {
 	public void openBrowser(){
 		DesiredCapabilities capab = new DesiredCapabilities();
 		capab.setJavascriptEnabled(true);
-		//capab.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "\phantomjs-2.1.1-macosx/bin/phantomjs");
+		//capab.setCapability("PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY", "phantomjs-2.1.1-macosx/bin/phantomjs");
 		
 		 driver = new PhantomJSDriver(capab);
 		 driver.get("http://hrm.seleniumminutes.com");
