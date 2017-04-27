@@ -17,6 +17,4 @@ notifications:
 
 script: 
 - mvn test -B
-- bin/phantomjs -v
 - phantomjs --webdriver=4444 &
-
