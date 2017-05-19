@@ -28,7 +28,8 @@ public class DSTVTest {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		//cap.setCapability("PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY", "phantomjs-2.1.1-macosx/bin/phantomjs");
-		driver  = new PhantomJSDriver(cap);
+		//driver  = new PhantomJSDriver(cap);
+		driver = new FirefoxDriver();
 		driver.get("http://m-net.dstv.com/South/home");	
 	}
 	

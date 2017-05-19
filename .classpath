@@ -45,5 +45,7 @@
 	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/PLAY/Selenium jars/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/PLAY/Selenium jars/selenium-server-standalone-2.53.0.jar"/>
 	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/PLAY/Selenium jars/selenium-java-3.3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/Discovery Digital/poi-3.16.jar"/>
+	<classpathentry kind="lib" path="/Users/Bhadilov/Documents/Discovery Digital/poi-ooxml-3.11.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
