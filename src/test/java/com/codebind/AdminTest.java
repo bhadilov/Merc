@@ -27,7 +27,8 @@ public class AdminTest {
 		capab.setJavascriptEnabled(true);
 		//capab.setCapability("PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY", "phantomjs-2.1.1-macosx/bin/phantomjs");
 		
-		 driver = new PhantomJSDriver(capab);
+		 //driver = new PhantomJSDriver(capab);
+		driver = new FirefoxDriver();
 		 driver.get("http://hrm.seleniumminutes.com");
 		 System.out.println("Shit");
 
