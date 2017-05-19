@@ -36,7 +36,7 @@ public class AdminTest {
 	
 	
 	private WebDriver driver;
-	readExcel rex= new  readExcel();
+
 	
 	
 	@Before
@@ -49,10 +49,10 @@ public class AdminTest {
 		System.setProperty("webdriver.gecko.driver", "geckodriver");
 		
 		 driver = new MarionetteDriver(capabilities); 
-		//driver = new FirefoxDriver();
-		 //driver = new PhantomJSDriver(capab);
-		 driver.get("https://za.deod.tv/en/");
-		 System.out.println("Discover Digital");
+	
+		 driver.get("http://hrm.seleniumminutes.com");
+		 System.out.println("Shit");
+
 
 	}
 	@Test
