@@ -50,7 +50,7 @@ public class AdminTest {
 		
 		 driver = new MarionetteDriver(capabilities); 
 	
-		 driver.get("http://hrm.seleniumminutes.com");
+		 driver.get("https://za.deod.tv/en/");
 		 System.out.println("Shit");
 
 
