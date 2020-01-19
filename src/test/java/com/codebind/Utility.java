@@ -1,28 +1,18 @@
 package com.codebind;
 
-import java.io.File;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class Utility {
-	
-	public static void captureScreenshot(WebDriver driver, String screenshotName)
-	{
-		try {
-			TakesScreenshot ts = (TakesScreenshot)driver;
-			File source=ts.getScreenshotAs(OutputType.FILE); 
-            FileUtils.copyFile(source, new File("./Screenshots/" + screenshotName + ".png"));
-            System.out.println("Screenshot taken: " + screenshotName);
-			
-		}
-		catch(Exception e){
-			System.out.println(screenshotName + ": Screenshot NOT taken: Reason: " + e.getMessage());
-		}
+
+	WebDriver driver=new ChromeDriver();
+    WebElement careers;
+
+
+	public void clickOnCareers(){
+
+		careers = driver.findElement(By.id("menu-item-1373"));
+		careers.click();
 	}
-	
-
-
 }

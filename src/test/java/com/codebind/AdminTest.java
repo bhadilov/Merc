@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.MarionetteDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
@@ -34,38 +35,35 @@ import org.openqa.selenium.By;
 
 public class AdminTest {
 	
-	
+    Utility util = new Utility();
 	private WebDriver driver;
 
 	
-	
 	@Before
-	public void openBrowser(){
-		//DesiredCapabilities capab = new DesiredCapabilities();
-		//capab.setJavascriptEnabled(true);
-		//capab.setCapability("PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY", "phantomjs-2.1.1-macosx/bin/phantomjs");
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		capabilities.setCapability("marionette", true);
-		System.setProperty("webdriver.gecko.driver", "geckodriver");
-		
-		 driver = new MarionetteDriver(capabilities); 
-	
-		 driver.get("https://za.deod.tv/en/");
-		 System.out.println("Shit");
+	public void openBrowser() throws InterruptedException {
+
+		System.setProperty("webdriver.chrome.driver" , "/usr/local/applications/repos/todelete/Java-Project-Selenium/chromedriver");
+		driver=new ChromeDriver();
 
 
 	}
+
+
 	@Test
-	public void verifonLandingPage(){
-		
-		Assert.assertEquals("Verify Title", driver.getTitle(), "Deod.tv - What's New");
-		driver.findElement(By.id("openSearch")).click();
-		driver.findElement(By.id("filmList")).click();
-	}
+	public void stepFive(){
 
+		driver.navigate().to("https://www.ilabquality.com/");
+		//driver.get("https://www.ilabquality.com/");
+		//driver.wait(4000);
+		Assert.assertEquals("Verify Title", driver.getTitle(), "Home Page - iLAB");
+		util.clickOnCareers();
+		//util.clickOnCareers();
+		//Assert.assertEquals("Verify Title", driver.getTitle(), "CAREERS - iLAB");
+
+	}
 	@After
-	public void saveScreenshotAndCloseBrowser() throws IOException{
-		driver.quit();		
+	public void finalAct() throws IOException{
+		driver.quit();
 	}
 	
 
